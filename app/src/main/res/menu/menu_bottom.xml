@@ -17,8 +17,8 @@
         app:cnb_backgroundColor="@color/inner_round"/>
     <item
         android:id="@+id/bkmark"
-        android:title="Contests"
-        android:icon="@drawable/quizz"
+        android:title="Bookmarks"
+        android:icon="@drawable/bookmark"
         app:cnb_iconColor="#fff"
         app:cnb_textColor="#fff"
         app:cnb_backgroundColor="@color/inner_round"/>

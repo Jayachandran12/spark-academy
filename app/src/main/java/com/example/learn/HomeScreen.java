@@ -8,7 +8,7 @@ import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
-import com.example.learn.Fragment_main.Contests;
+import com.example.learn.Fragment_main.bookmark;
 import com.example.learn.Fragment_main.home_fragment;
 import com.example.learn.Fragment_main.profile_fragment;
 import com.example.learn.Fragment_main.search_fragment;
@@ -82,7 +82,7 @@ public class HomeScreen extends AppCompatActivity {
                         fragment = new search_fragment();
                         break;
                     case R.id.bkmark:
-                        fragment = new Contests();
+                        fragment = new bookmark();
                         break;
                     case R.id.profile:
                         fragment = new profile_fragment();
