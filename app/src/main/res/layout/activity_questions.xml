@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_AQ"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Admin.Quiz.Questions">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/DisplayQs_UQ"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="3dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="ADD QUESTIONS"
+            android:backgroundTint="@color/card3"
+            android:id="@+id/AddQs_UQ"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

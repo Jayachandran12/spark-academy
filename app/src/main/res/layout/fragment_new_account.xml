@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    tools:context=".Fragment_Auth.new_account">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_gravity="center"
+                    android:text="CREATE  ACCOUNT"
+                    android:textSize="18dp"/>
+
+                <!--<soup.neumorphism.NeumorphFloatingActionButton
+                    android:id="@+id/btnbackcur"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="40dp"
+                    android:scaleType="center"
+                    android:src="@drawable/back_arrow">
+
+                </soup.neumorphism.NeumorphFloatingActionButton>-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="« Spark »"
+                    android:textColor="#3F4671"
+                    android:textSize="35dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="A Learning Platform to Rise Shine"
+                android:textSize="14dp" />
+
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/Name_FNA"
+                    style="@style/neumorp_editText"
+                    android:drawableStart="@drawable/person"
+                    android:hint="Enter your Name"
+                    android:textColor="?attr/colorSecondary"
+                    android:inputType="text">
+                </EditText>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/UName_FNA"
+                    style="@style/neumorp_editText"
+                    android:drawableStart="@drawable/mail"
+                    android:textColor="?attr/colorSecondary"
+                    android:hint="Enter your Email"
+                    android:inputType="textEmailAddress">
+
+                </EditText>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/Phone_FNA"
+                    style="@style/neumorp_editText"
+                    android:drawableStart="@drawable/phone"
+                    android:textColor="?attr/colorSecondary"
+                    android:hint="Enter your Phone no"
+                    android:inputType="number">
+
+                </EditText>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/Pwd_FNA"
+                    style="@style/neumorp_editText"
+                    android:drawableStart="@drawable/pwd"
+                    android:textColor="?attr/colorSecondary"
+                    android:hint="Enter your Password"
+                    android:inputType="textPassword">
+
+                </EditText>
+            </soup.neumorphism.NeumorphCardView>
+
+            <CheckBox
+                android:id="@+id/checkbox_NA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="Show Password"
+                android:textColor="#3F4671" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/signup_FNA"
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                    app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingTop="15dp"
+                    android:text="sign up"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:neumorph_backgroundColor="#3F4671"></soup.neumorphism.NeumorphButton>
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/Login_FNA"
+                    style="@style/Widget.Neumorph.Button"
+                    app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                    app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingTop="15dp"
+                    android:text="Log  in"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:neumorph_backgroundColor="#3F4671">
+                </soup.neumorphism.NeumorphButton>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

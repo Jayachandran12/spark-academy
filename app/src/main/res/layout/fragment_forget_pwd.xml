@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorPrimary"
+    tools:context=".Fragment_Auth.Forget_pwd">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="« Spark »"
+                    android:textColor="#3F4671"
+                    android:textSize="35dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="A Learning Platform to Rise Shine"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter your Code word and get reset your Password"
+                android:gravity="center"
+                android:layout_marginTop="145dp"
+                android:textSize="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/poppins_medium"/>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="200dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/UName_FP"
+                    style="@style/neumorp_editText"
+                    android:hint="Enter your Email"
+                    android:textColor="?attr/colorSecondary"
+                    android:inputType="textEmailAddress"
+                    android:drawableStart="@drawable/mail">
+                </EditText>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphButton
+                style="@style/Widget.Neumorph.Button"
+                android:id="@+id/Forget_btn_FP"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="15dp"
+                app:neumorph_backgroundColor="#3F4671"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:paddingTop="15dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="20dp"
+                android:text="SEND MAIL">
+            </soup.neumorphism.NeumorphButton>
+        </FrameLayout>
+    </ScrollView>
+</FrameLayout>

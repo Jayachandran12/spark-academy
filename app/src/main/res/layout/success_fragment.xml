@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/open_dialog"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="REGISTRATION SUCCESSFUL"
+            android:textSize="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:paddingTop="30dp"
+            />
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/check"
+            android:paddingTop="60dp" />
+
+        <TextView
+            android:id="@+id/txt_SF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Thankyou for Selecting Spark Education"
+            android:textSize="16dp"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="185dp"
+            />
+        <soup.neumorphism.NeumorphButton
+            style="@style/Widget.Neumorph.Button"
+            android:id="@+id/Submit_SF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:neumorph_backgroundColor="#3F4671"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            app:neumorph_shadowColorDark="#BFBBBB"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textSize="16dp"
+            android:text="Welcome">
+        </soup.neumorphism.NeumorphButton>
+    </RelativeLayout>
+
+</RelativeLayout>

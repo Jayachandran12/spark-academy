@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/create_acc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="68dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="« Spark »"
+                    android:textColor="#3F4671"
+                    android:textSize="35dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="A Learning Platform to Rise Shine"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="20dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/UName_MA"
+                    style="@style/neumorp_editText"
+                    android:drawableStart="@drawable/person"
+                    android:hint="Email - id"
+                    android:textColor="?attr/colorSecondary"
+                    android:inputType="textEmailAddress">
+                </EditText>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/UPwd_MA"
+                    style="@style/neumorp_editText"
+                    android:drawableStart="@drawable/pwd"
+                    android:textColor="?attr/colorSecondary"
+                    android:hint="Password"
+                    android:inputType="textPassword">
+                </EditText>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Show Password"
+                    android:textColor="#3F4671" />
+
+                <TextView
+                    android:id="@+id/FPwd_MA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Forget Password ?"
+                    android:textColor="#3F4671" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/btn_login_MA"
+                    style="@style/Widget.Neumorph.Button"
+                    app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                    app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:paddingTop="15dp"
+                    android:text="LOGIN"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:neumorph_backgroundColor="#3F4671">
+
+                </soup.neumorphism.NeumorphButton>
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/btn_login_admin_MA"
+                    style="@style/Widget.Neumorph.Button"
+                    app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                    app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:paddingTop="15dp"
+                    android:text="ADMIN"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:neumorph_backgroundColor="#3F4671">
+
+                </soup.neumorphism.NeumorphButton>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="35dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="140dp"
+                    android:layout_height="1dp"
+                    android:background="#BDBDBD" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="OR"
+
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="140dp"
+                    android:layout_height="1dp"
+                    android:background="#BDBDBD" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Login with"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/btn_g_login"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/google"></ImageView>
+
+            <TextView
+                android:id="@+id/CAccount_MA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Don't have an account ?"
+                android:textColor="#3F4671"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

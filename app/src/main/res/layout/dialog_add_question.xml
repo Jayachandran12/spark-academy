@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="Add New Questions"
+                android:textSize="18dp" />
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_height="80dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/create_question"
+                    style="@style/neumorp_editText"
+                    android:hint="Enter the Question"
+                    android:textColor="?attr/colorSecondary">
+                </EditText>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/create_option1"
+                    style="@style/neumorp_editText"
+                    android:textColor="?attr/colorSecondary"
+                    android:hint="option 1">
+
+                </EditText>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/create_option2"
+                    style="@style/neumorp_editText"
+                    android:textColor="?attr/colorSecondary"
+                    android:hint="option 2">
+
+                </EditText>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/create_option3"
+                    style="@style/neumorp_editText"
+                    android:textColor="?attr/colorSecondary"
+                    android:hint="option 3">
+
+                </EditText>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/create_option4"
+                    style="@style/neumorp_editText"
+                    android:textColor="?attr/colorSecondary"
+                    android:hint="option 4">
+
+                </EditText>
+            </soup.neumorphism.NeumorphCardView>
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/create_optioncrt"
+                    style="@style/neumorp_editText"
+                    android:textColor="?attr/colorSecondary"
+                    android:hint="Correct Answer">
+
+                </EditText>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/create_add"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"
+                android:paddingTop="15dp"
+                android:text="ADD QUESTIONS"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                app:neumorph_backgroundColor="#3F4671">
+
+            </soup.neumorphism.NeumorphButton>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

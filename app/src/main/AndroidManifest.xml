@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.learn">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Learn">
+        <activity android:name=".Fragment_main.Quizz.WonActivity"></activity>
+        <activity android:name=".Admin.Quiz.Questions" />
+        <activity android:name=".Fragment_main.Quizz.QuizActivity" />
+
+        <service
+            android:name=".Admin.Services.MyBoundService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Fragment_main.Services.Retrieve_profile_Intent_Service"
+            android:exported="false" />
+
+        <activity android:name=".Fragment_main.Fragment.PagerAdaptor.Student_content" />
+        <activity
+            android:name=".Admin.video.video_detailed_view"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".Admin.video.uploadThumbnail" />
+        <activity android:name=".Admin.video.uploadVideos" />
+        <activity android:name=".Admin.Content" />
+        <activity android:name=".Admin.AdminActivity" />
+
+        <service
+            android:name=".Fragment_Auth.Services.Additional"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Fragment_Auth.Services.Forget_pwd_Started_service"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".HomeScreen" />
+        <activity android:name=".create_account" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".MainActivity$NetworkCheck1"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

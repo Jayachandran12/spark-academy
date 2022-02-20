@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".Fragment_main.Fragment.quiz_stu_list">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_content_QSL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="3dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

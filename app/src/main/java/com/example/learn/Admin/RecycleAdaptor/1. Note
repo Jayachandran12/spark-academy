@@ -1,0 +1,17 @@
+
+step 1 : creata a java class and initialize the data should be loaded  [subjectList.java]
+step 2 : create Layout Resource file with Card Layout [subject_list.xml]
+step 3 : create an [ACTIVITY OR FRAGMENT] where Recycler view should occur [homeFragment.java]
+step 4 : Add recycler view in [homeFragment_layout.xml]
+
+step 5 : create Adaptor for the Recycler view
+step 6 : extend methods for that recycler view
+
+
+[EXOPLAYER]
+
+1. BAND WIDTH METER - used to get default bandwidth.
+2. TRACK SELECTOR - track selector is used to navigate between video using a default seekbar.
+3. EXO PLAYER -  we are adding our track selector to exoplayer. [ExoPlayer is an application level media player for Android.
+                 It provides an alternative to Android’s MediaPlayer API for playing audio and video both locally and over the Internet.]
+4. ExtractorsFactory - Extractor factory that returns an empty list of extractors.

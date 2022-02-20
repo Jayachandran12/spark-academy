@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/rounded"
+    android:layout_height="250sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oops Time Out!"
+            android:gravity="center"
+            android:padding="30dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="24dp"/>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/timeout"
+            android:layout_gravity="center"
+            />
+        <!--<soup.neumorphism.NeumorphButton
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="10dp"
+            android:text="Move NEXT"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:neumorph_backgroundColor="@color/card3">
+        </soup.neumorphism.NeumorphButton>-->
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

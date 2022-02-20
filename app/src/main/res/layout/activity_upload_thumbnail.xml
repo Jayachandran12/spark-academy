@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Admin.video.uploadThumbnail">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+
+             <TextView
+                 android:id="@+id/thumbTitle"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="qwerty"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:textSize="18dp"
+                 android:gravity="center"
+                 android:layout_margin="30dp"/>
+
+         </LinearLayout>
+
+
+<soup.neumorphism.NeumorphCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/viewThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="30dp"
+        android:layout_gravity="center"/>
+</soup.neumorphism.NeumorphCardView>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+
+             <soup.neumorphism.NeumorphButton
+                 android:id="@+id/browseThumbnail"
+                 style="@style/Widget.Neumorph.Button"
+                 android:layout_width="wrap_content"
+                 android:layout_height="80dp"
+                 android:layout_weight="1"
+                 android:layout_gravity="center"
+                 android:layout_marginStart="15dp"
+                 android:layout_marginEnd="15dp"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:paddingTop="15dp"
+                 android:text="BROWSE "
+                 android:textColor="@color/white"
+                 android:textSize="20dp"
+                 app:neumorph_backgroundColor="#3F4671">
+             </soup.neumorphism.NeumorphButton>
+
+             <soup.neumorphism.NeumorphButton
+                 android:id="@+id/uploadThumbnail"
+                 style="@style/Widget.Neumorph.Button"
+                 android:layout_width="wrap_content"
+                 android:layout_height="80dp"
+                 android:layout_weight="1"
+                 android:layout_gravity="center"
+                 android:layout_marginStart="15dp"
+                 android:layout_marginEnd="15dp"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:paddingTop="15dp"
+                 android:text="UPLOAD "
+                 android:textColor="@color/white"
+                 android:textSize="20dp"
+                 app:neumorph_backgroundColor="#3F4671">
+             </soup.neumorphism.NeumorphButton>
+
+         </LinearLayout>
+
+
+     </LinearLayout>
+
+</RelativeLayout>

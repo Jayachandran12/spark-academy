@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/colorPrimary"
+    tools:context=".Fragment_main.profile_fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <soup.neumorphism.NeumorphCardView
+                    app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                    app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                    android:layout_width="190dp"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:transitionName="image"
+                            android:layout_width="130dp"
+                            app:civ_border_width="5dp"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            app:civ_border_color="@color/rounded"
+                            android:src="@drawable/icon_male"/>
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/image_profile_PF"
+                            android:transitionName="image"
+                            android:layout_width="130dp"
+                            app:civ_border_width="5dp"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            app:civ_border_color="@color/rounded"
+                            android:src="@drawable/icon_male"/>
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fab_camera_PF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerInside"
+                            android:elevation="1dp"
+                            app:borderWidth="0dp"
+                            android:backgroundTint="@color/rounded"
+                            android:src="@drawable/ic_baseline_camera"
+                            android:layout_alignBottom="@id/image_profile_PF"
+                            android:layout_alignEnd="@id/image_profile_PF"
+                            android:tint="@android:color/white"/>
+
+                    </RelativeLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOTIFICATIONS"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/about_PF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ABOUT US"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/logout_PF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LOGOUT"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This Name and Email will be considered during the time of Quizzes and Contests"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"/>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/Name_PF"
+                    style="@style/neumorp_editText"
+                    android:drawableStart="@drawable/person"
+                    android:hint=" Name"
+                    android:inputType="text"
+                    android:textColor="?attr/colorSecondary"
+                    android:enabled="false"
+                    ></EditText>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/UName_PF"
+                    style="@style/neumorp_editText"
+                    android:drawableStart="@drawable/mail"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="?attr/colorSecondary"
+                    android:enabled="false">
+
+                </EditText>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/Phone_PF"
+                    style="@style/neumorp_editText"
+                    android:drawableStart="@drawable/phone"
+                    android:hint="Phone no"
+                    android:inputType="number"
+                    android:textColor="?attr/colorSecondary"
+                    android:enabled="false">
+
+                </EditText>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:neumorph_shadowColorLight="?attr/colorOnPrimary"
+                app:neumorph_shadowColorDark="?attr/colorOnSecondary"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="120dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PERFORMANCE"
+                    android:textSize="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NO OF QUIZZES PARTICIPATED : 07"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="50dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NO OF POINTS SCORED : 88"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginBottom="20dp"/>
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

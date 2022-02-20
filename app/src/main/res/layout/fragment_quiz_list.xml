@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".Admin.Fragments.quizList">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_content_QL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="3dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/create_quiz_QL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:elevation="1dp"
+            app:borderWidth="0dp"
+            android:backgroundTint="@color/buffered_color"
+            android:src="@drawable/add"
+            android:layout_margin="20dp"
+            android:layout_alignBottom="@id/recycler_content_QL"
+            android:layout_alignEnd="@id/recycler_content_QL"
+            android:tint="@android:color/white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

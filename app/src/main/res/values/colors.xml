@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#efeeee</color>
+    <color name="colorPrimaryDark">#E6E6E6</color>
+    <color name="colorAccent">#efeeee</color>
+    <color name="dark_mode">#262833</color>
+
+    <color name="rounded">#B6B8DC</color>
+    <!--color name="inner_round">#A0CBEF</color-->
+    <color name="inner_round">@color/black</color>
+
+    <color name="card1">#FDD835</color>
+    <color name="card2">#7CB342</color>
+    <color name="card3">#00897B</color>
+    <color name="card4">#00ACC1</color>
+
+    <color name="logout">#128C7E</color>
+    <color name="transparent">#0000ffff</color>
+
+    <!-- Video -->
+    <color name="progressbar">#80000000</color>
+    <color name="Video_progress1">#FF3333</color>
+    <color name="buffered_color">#95989F</color>
+    <color name="unplayed_color">#45424E</color>
+    <color name="duration_timer">#FFFFFFFF</color>
+    <color name="duration">#CBCDC8</color>
+
+    <!-- Neumorp -->
+    <color name="cardDarkTop">#181818</color>
+    <color name="cardDarkBottom">#3A3C4C</color>
+    <color name="cardLightTop">#DADBDB</color>
+    <color name="cardLightBottom">#FFFFFFFF</color>
+
+    <!-- quiz -->
+    <color name="correct">#25D366</color>
+    <color name="wrong">#E62117</color>
+</resources>

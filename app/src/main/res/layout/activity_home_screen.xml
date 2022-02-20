@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".HomeScreen">
+
+    <include
+        android:id="@+id/toolbarHS"
+        layout="@layout/app_bar_layout"
+        >
+    </include>
+
+    <LinearLayout
+        android:id="@+id/home_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+    </LinearLayout>
+    <!-- Fragment to activity
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameHS"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Welcome"
+        android:textSize="18dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"/>-->
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="13dp"
+        android:fontFamily="casual"
+        android:text="Learn the Courses"
+        android:layout_marginTop="10dp"
+        android:textSize="38dp" />-->
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottom_navigation_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:elevation="8dp"
+        android:padding="8dp"
+        android:background="@drawable/rounded"
+        android:layout_alignParentBottom = "true"
+        app:cnb_unselectedColor="@color/black"
+        app:cnb_orientationMode="horizontal"
+        app:cnb_menuResource="@menu/menu_bottom"
+        />
+</RelativeLayout>

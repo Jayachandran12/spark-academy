@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home"
+        app:cnb_iconColor="#fff"
+        app:cnb_textColor="#fff"
+        app:cnb_backgroundColor="@color/inner_round"/>
+    <item
+        android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/search"
+        app:cnb_iconColor="#fff"
+        app:cnb_textColor="#fff"
+        app:cnb_backgroundColor="@color/inner_round"/>
+    <item
+        android:id="@+id/bkmark"
+        android:title="Contests"
+        android:icon="@drawable/quizz"
+        app:cnb_iconColor="#fff"
+        app:cnb_textColor="#fff"
+        app:cnb_backgroundColor="@color/inner_round"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profile"
+        app:cnb_iconColor="#fff"
+        app:cnb_textColor="#fff"
+        app:cnb_backgroundColor="@color/inner_round"/>
+</menu>
