@@ -17,6 +17,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.learn.R;
 import com.example.learn.Helper_class.Model.filemodel;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -28,8 +35,16 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class uploadVideos extends AppCompatActivity {
 
+    private RequestQueue mrequestQue;
+    private String url = "https://fcm.googleapis.com/fcm/send";
 
     private TextView title,videoName,videoDesc;
     private String videoId,vName;
@@ -54,7 +69,6 @@ public class uploadVideos extends AppCompatActivity {
         videoName = (EditText) findViewById(R.id.videoTitle_UV);
         videoDesc = (EditText) findViewById(R.id.videoDesc_UV);
 
-
         //video
         videoview = (VideoView) findViewById(R.id.VideoView_UV);
         browse = (Button) findViewById(R.id.browse_UP);
@@ -76,6 +90,16 @@ public class uploadVideos extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference("Course").child(titlename);
 
+        // volley
+        mrequestQue = Volley.newRequestQueue(this);
+        //FirebaseMessaging.getInstance().subscribeToTopic("all");
+        /*FirebaseMessaging.getInstance().subscribeToTopic("all").addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                System.out.println("Subscription successful");
+            }
+        });*/
+
         //browse
         browse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,11 +111,26 @@ public class uploadVideos extends AppCompatActivity {
             }
         });
 
+        /*if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("video notify","video notify", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }*/
+
         //upload
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 uploadToFirebase(titlename);
+                /*NotificationCompat.Builder builder = new NotificationCompat.Builder(uploadVideos.this,"video notify");
+                builder.setContentTitle(titlename);
+                builder.setContentText("New video is uploaded in "+titlename);
+                builder.setSmallIcon(R.drawable.bookmark);
+                builder.setAutoCancel(true);
+
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(uploadVideos.this);
+                managerCompat.notify(1,builder.build());*/
+
             }
         });
 
@@ -157,6 +196,7 @@ public class uploadVideos extends AppCompatActivity {
                                             .putExtra("Lecture",titlefetch)
                                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                                 }
+                                sendNotification(vName,titlefetch);
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
@@ -176,5 +216,44 @@ public class uploadVideos extends AppCompatActivity {
             }
         });
     }
+
+    private void sendNotification(String vName,String titleFetch) {
+        // JSON OBJECT
+        //"/topics/"+"news"
+        try {
+            JSONObject mainObj = new JSONObject();
+            mainObj.put("to","/topics/all");
+            JSONObject notificationObj = new JSONObject();
+            notificationObj.put("title",vName);
+            notificationObj.put("body","A New video is uploaded in "+titleFetch);
+            mainObj.put("notification",notificationObj);
+
+            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url,
+                    mainObj,
+                    new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+
+                }
+            }){
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String,String> header = new HashMap<>();
+                    header.put("Content-Type","application/json");
+                    header.put("Authorization","key=AAAA5oLbGNY:APA91bGVm8yL209YyoG9tZLWWVvX1qVd4WXV7fKD7X3qHYphyFEfPUdAY-HmCilsb5sJTeDM2JpDbLi7t5ZzcM6ZeloR3glPpix4Qzq0TST8w_DcauZW6QobKBkWHnWz5SWZro6Z3DTa");
+                    return header;
+                }
+            };
+            mrequestQue.add(request);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }

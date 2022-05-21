@@ -3,18 +3,38 @@ plugins {
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.chaquo.python'
+
 android {
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.example.learn"
+
+        // give source folder to python
+        sourceSets{
+            main{
+                python{
+                    srcDirs = ["src/main/python"]
+                }
+            }
+        }
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+
+        // Here i will give path to my python.exe
+        python{
+            buildPython = "E:/python/python.exe"
+        }
     }
 
     buildTypes {
@@ -53,6 +73,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.0.2'
     implementation 'com.firebaseui:firebase-ui-database:6.2.1'
     implementation 'com.google.android.gms:play-services-auth:20.0.1'
+    implementation 'com.google.firebase:firebase-messaging:23.0.0'
+
+    //Volley
+    implementation 'com.android.volley:volley:1.2.1'
 
     // [EXOPLAYER]
     implementation 'com.google.android.exoplayer:exoplayer:2.7.3'

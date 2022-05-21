@@ -10,8 +10,8 @@
         app:cnb_backgroundColor="@color/inner_round"/>
     <item
         android:id="@+id/search"
-        android:title="Search"
-        android:icon="@drawable/search"
+        android:title="Compiler"
+        android:icon="@drawable/code"
         app:cnb_iconColor="#fff"
         app:cnb_textColor="#fff"
         app:cnb_backgroundColor="@color/inner_round"/>

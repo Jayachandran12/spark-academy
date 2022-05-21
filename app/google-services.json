@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "990037874902",
+    "firebase_url": "https://learn-c1c6f-default-rtdb.firebaseio.com",
     "project_id": "learn-c1c6f",
     "storage_bucket": "learn-c1c6f.appspot.com"
   },
@@ -13,14 +14,6 @@
         }
       },
       "oauth_client": [
-        {
-          "client_id": "990037874902-ealun1or5254a4rrgk19b3c4jfuc8rnd.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.learn",
-            "certificate_hash": "6abb445253a250b885a35e5b1119b74d23d50faa"
-          }
-        },
         {
           "client_id": "990037874902-gmclfoamaglk41cmtvsihibfi0he2djg.apps.googleusercontent.com",
           "client_type": 3

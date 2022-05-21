@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -14,6 +16,7 @@ import com.example.learn.Fragment_main.profile_fragment;
 import com.example.learn.Fragment_main.search_fragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 public class HomeScreen extends AppCompatActivity {
@@ -54,6 +57,14 @@ public class HomeScreen extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new home_fragment()).commit();
         bottomMenu();
 
+        FirebaseMessaging.getInstance().subscribeToTopic("all");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_top,menu);
+        return true;
     }
 
     @Override

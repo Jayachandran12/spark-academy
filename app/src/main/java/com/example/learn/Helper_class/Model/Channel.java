@@ -1,7 +1,7 @@
 package com.example.learn.Helper_class.Model;
 
 public class Channel {
-    String sub_name,sub_desc,sub_author,sub_code,category;
+    public String sub_name,sub_desc,sub_author,sub_code,category;
 
     public Channel() {
     }

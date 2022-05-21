@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,16 +18,20 @@ import com.example.learn.Helper_class.Model.Channel;
 
 import java.util.ArrayList;
 
-public class HelperAdaptor extends RecyclerView.Adapter {
+public class HelperAdaptor extends RecyclerView.Adapter implements Filterable {
 
     Context context;
     ArrayList<Channel> list;
     SubjectItemClickListener subjectItemClickListener;
 
+    // To filter data
+    ArrayList<Channel> fullList;
+
     public HelperAdaptor(Context context, ArrayList<Channel> list, SubjectItemClickListener subjectItemClickListener) {
         this.context = context;
-        this.list = list;
+        this.fullList = list;
         this.subjectItemClickListener = subjectItemClickListener;
+        this.list = new ArrayList<>(fullList);
     }
 
 
@@ -64,6 +70,39 @@ public class HelperAdaptor extends RecyclerView.Adapter {
     public int getItemCount() {
         return list.size();
     }
+
+    @Override
+    public Filter getFilter() {
+        return sub_Filter;
+    }
+
+    private final Filter sub_Filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            ArrayList<Channel> filterResult = new ArrayList<>();
+
+            if(charSequence == null || charSequence.length() == 0){
+                filterResult.addAll(fullList);
+            }else{
+                String filterPattern = charSequence.toString().toLowerCase().trim();
+                for(Channel ch : fullList) {
+                    if (ch.getSub_name().toLowerCase().contains(filterPattern))
+                        filterResult.add(ch);
+                    }
+                }
+                FilterResults results = new FilterResults();
+                results.values = filterResult;
+                //results.count = filterResult.size();
+                return results;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                list.clear();
+                list.addAll((ArrayList)filterResults.values);
+                notifyDataSetChanged();
+            }
+    };
 
     public class ViewHolderClass extends RecyclerView.ViewHolder{
         TextView subname,subdept;

@@ -30,6 +30,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 // 1. ADD collapsing toolbar
 public class MainActivity extends AppCompatActivity {
@@ -83,6 +84,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Get Device Token
+        /*FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            return;
+                        }
+                        String token = task.getResult();
+                        System.out.println("TOKEN"+token);
+                    }
+                });
+        */
         // Activity to Fragment
         forget_pwd.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -11,7 +11,7 @@
     <color name="colorPrimary">#efeeee</color>
     <color name="colorPrimaryDark">#E6E6E6</color>
     <color name="colorAccent">#efeeee</color>
-    <color name="dark_mode">#262833</color>
+    <color name="dark_mode">#1A2227</color>
 
     <color name="rounded">#B6B8DC</color>
     <!--color name="inner_round">#A0CBEF</color-->
@@ -35,7 +35,7 @@
 
     <!-- Neumorp -->
     <color name="cardDarkTop">#181818</color>
-    <color name="cardDarkBottom">#3A3C4C</color>
+    <color name="cardDarkBottom">#333333</color>
     <color name="cardLightTop">#DADBDB</color>
     <color name="cardLightBottom">#FFFFFFFF</color>
 
